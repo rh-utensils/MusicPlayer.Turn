@@ -56,7 +56,7 @@ func getPort() (int) {
 func main() {
 	publicIP := flag.String("public-ip", getPublicIP(), "IP Address that TURN can be contacted by.")
 	port := flag.Int("port", getPort(), "Listening port.")
-	users := flag.String("users", "test=test", "List of username and password (e.g. \"user=pass,user=pass\")")
+	users := flag.String("users", "musicplayer=z!ErcBpHfgV%QA5Bz*a6", "List of username and password (e.g. \"user=pass,user=pass\")")
 	realm := flag.String("realm", "pion.ly", "Realm (defaults to \"pion.ly\")")
 	flag.Parse()
 
