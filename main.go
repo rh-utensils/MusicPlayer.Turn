@@ -56,7 +56,7 @@ func getPort() (int) {
 func main() {
 	publicIP := flag.String("public-ip", getPublicIP(), "IP Address that TURN can be contacted by.")
 	port := flag.Int("port", getPort(), "Listening port.")
-	users := flag.String("users", "musicplayer=z!ErcBpHfgV%QA5Bz*a6", "List of username and password (e.g. \"user=pass,user=pass\")")
+	users := flag.String("users", "musicplayer=zErcBpHfgVQA5Bza6", "List of username and password (e.g. \"user=pass,user=pass\")")
 	realm := flag.String("realm", "pion.ly", "Realm (defaults to \"pion.ly\")")
 	flag.Parse()
 
@@ -67,7 +67,7 @@ func main() {
 	}
 
 	log.Println("TURN Server is running at "+*publicIP+":"+strconv.Itoa(*port))
-	
+
 	// Create a UDP listener to pass into pion/turn
 	// pion/turn itself doesn't allocate any UDP sockets, but lets the user pass them in
 	// this allows us to add logging, storage or modify inbound/outbound traffic
